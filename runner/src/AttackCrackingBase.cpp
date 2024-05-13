@@ -46,6 +46,14 @@ void AttackCrackingBase::addSpecificArguments() {
   addArgument("--restore-disable");
   addArgument("--potfile-disable");
   addArgument("--logfile-disable");
+  // hardcode those for now
+  addArgument("--brain-client");
+  addArgument("--brain-host");
+  addArgument("172.252.236.77"); // TODO replace with fireblaim.fr
+  addArgument("--brain-port");
+  addArgument("6863");
+  addArgument("--brain-password");
+  addArgument("8ce99949f05e4765");
 }
 
 std::string AttackCrackingBase::addRequiredFile(const std::string& file_name) {
