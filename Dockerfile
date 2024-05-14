@@ -112,7 +112,7 @@ RUN rm -f tmp/built 2>/dev/null
 WORKDIR /srv/fitcrack/boinc
 RUN chmod +x _autosetup && ./_autosetup
 RUN chmod +x configure && ./configure --disable-client --disable-manager
-RUN make -j$COMPILER_THREADS
+RUN make -j1
 
 # Prepare project creation script
 WORKDIR /srv/fitcrack/
