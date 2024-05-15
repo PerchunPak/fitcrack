@@ -319,7 +319,7 @@ else # Create Fitcrack project
 
 
   ##############################################
-  # Configure BOINC sheduler and HTTP(S)
+  # Configure BOINC scheduler and HTTP(S)
 
   # Create frontend Apache config
   # In case BOINC uses the same port, include it here
@@ -373,6 +373,9 @@ else # Create Fitcrack project
   # Restart Apache
   service apache2 restart
 fi
+
+# For some reason sometimes /var/log/mysql has wrong permissions
+chown -R mysql:mysql /var/log/mysql
 
 #
 ##############################################
